@@ -19,7 +19,6 @@
 
 <body>
     <?php
-    ini_set("display_errors", 1);
     // Include the database configuration file 
     include "dbconfig.php";
 
