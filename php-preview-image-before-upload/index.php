@@ -1,4 +1,5 @@
 <?php
+
 /*
  @Author: Sanjay Kumar
  @Project: PHP Preview an Image Before Upload Using jQuery Tutorial
