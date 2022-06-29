@@ -1,5 +1,11 @@
 <?php
-
+/*
+ @Author: Sanjay Kumar
+ @Project: PHP How To Install SSL on Subdomain via cPanel API
+ @Email: onlinewebtutorhub@gmail.com
+ @Website: https://onlinewebtutorblog.com/
+*/
+ 
 include './xmlapi.php';
 
 // cPanel credentials
