@@ -10,7 +10,7 @@
 $host   = "localhost";
 $dbuser = "admin";
 $dbpass = "Admin@123";
-$dbname = "laravel_joins";
+$dbname = "php_applications";
 
 // Create database connection
 $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
