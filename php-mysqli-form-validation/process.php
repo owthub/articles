@@ -9,12 +9,12 @@
 // Include Database
 include './dbconfig.php';
 
-$name = htmlspecialchars(trim($_POST['username']));
+$username = htmlspecialchars(trim($_POST['username']));
 $email = htmlspecialchars(trim($_POST['email']));
 $pass = htmlspecialchars(trim($_POST['password']));
 $mobile = htmlspecialchars(trim($_POST['mobile']));
 
-if (empty($name) || empty($email) || empty($pass) || empty($mobile)) {
+if (empty($username) || empty($email) || empty($pass) || empty($mobile)) {
 
     echo '<div class="alert alert-success">Please fill all required field</div>';
 
@@ -26,7 +26,7 @@ if (empty($name) || empty($email) || empty($pass) || empty($mobile)) {
     $sql = "INSERT INTO users(username,email,password,mobile) VALUES (?, ?, ?, ?)";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $name, $email, $pass, $mobile);
+    $stmt->bind_param("ssss", $username, $email, $pass, $mobile);
 
     $stmt->execute();
 
