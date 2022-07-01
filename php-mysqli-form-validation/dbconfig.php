@@ -15,7 +15,7 @@ $dbname = "php_applications";
 // Create database connection
 $conn = new mysqli($host, $dbuser, $dbpass, $dbname);
 
-// Check connection
+// Check database connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
