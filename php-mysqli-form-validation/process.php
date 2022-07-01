@@ -21,6 +21,8 @@ if (empty($name) || empty($email) || empty($pass) || empty($mobile)) {
     exit();
 } else {
 
+	// Save data
+
     $sql = "INSERT INTO users(username,email,password,mobile) VALUES (?, ?, ?, ?)";
 
     $stmt = $conn->prepare($sql);
