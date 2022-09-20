@@ -1,0 +1,44 @@
+<!--
+Author: Sanjay Kumar
+Email: onlinewebtutorhub@gmail.com 
+Method: POST
+Description: jQuery Ajax request to save employee data to fakeapi server.
+Website: https://api.onlinewebtutorblog.com/
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        var formdata = {
+            username: "sanjay_owt",
+            name: "Sanjay Kumar",
+            email: "sanjay_test@example.net",
+            gender: "Male",
+            designation: "Web developer",
+            phone_number: "8529637410",
+            complete_address: "Sample address, 100101"
+        };
+
+        saveDataviaAPI(formdata);
+    });
+
+    function saveDataviaAPI(formdata) {
+        $.ajax({
+            type: "POST",
+            url: "https://api.onlinewebtutorblog.com/employees",
+            dataType: "json",
+            data: formdata,
+            success: function(result, status, xhr) {
+
+                console.log(result); // Api data
+            },
+            error: function(xhr, status, error) {
+
+                alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+            }
+        });
+    }
+</script>

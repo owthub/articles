@@ -1,0 +1,33 @@
+<!--
+Author: Sanjay Kumar
+Email: onlinewebtutorhub@gmail.com 
+Method: PATCH
+Description: jQuery Ajax request to delete employee data from fakeapi server.
+Website: https://api.onlinewebtutorblog.com/
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        deleteDataviaAPI();
+    });
+
+    function deleteDataviaAPI() {
+
+        $.ajax({
+            type: "DELETE",
+            url: "https://api.onlinewebtutorblog.com/employees/5",
+            dataType: "json",
+            success: function(result, status, xhr) {
+
+                console.log(result); // Api data
+            },
+            error: function(xhr, status, error) {
+
+                alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
+            }
+        });
+    }
+</script>
